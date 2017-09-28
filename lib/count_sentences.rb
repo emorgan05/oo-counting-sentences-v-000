@@ -20,3 +20,6 @@ class String
 
   end
 end
+
+"This is a string! It has three sentences. Right?" = String.new
+"This is a string! It has three sentences. Right?".count_sentences
