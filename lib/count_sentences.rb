@@ -15,6 +15,26 @@ class String
   end
 
   def count_sentences
-    self.sentence?.question?.exclamation?
+    array = self.split(" ")
+    sentence_array = []
+    sentence = ""
+    array.each do |word|
+      if word.sentence?
+        sentence << word
+        sentence_array << sentence
+        sentence = ""
+      elsif word.question?
+        sentence << word
+        sentence_array << sentence
+        sentence = ""
+      elsif word.exclamation?
+        sentence << word
+        sentence_array << sentence
+        sentence = ""
+      else
+        sentence << word
+      end
+    end
+    sentence_array.length
   end
 end
