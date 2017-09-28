@@ -19,5 +19,3 @@ class String
     array.length
   end
 end
-
-"This is a string! It has three sentences. Right?".count_sentences
